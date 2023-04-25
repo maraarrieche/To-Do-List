@@ -7,7 +7,7 @@ const ToDoList = () => {
 
     const [taskList,setTaskList] = useState([
         {
-            description: "cepillarme los dientes",
+            description: "Cepillarme los dientes",
             status: true
         },
         {
@@ -41,16 +41,16 @@ const ToDoList = () => {
 
     return(
         <>
-        <h1 className="titulo">To do List</h1>
+        <h1 className="titulo">To Do List</h1>
     <div className="input-group mb-3 justify-content-center">
         <input type="text" onKeyUp={HandleNewTask} />
     </div>
         <ul className="list-group" id="lista">
             {taskList.map((element, index) => {
                 return(
-                    <li key={index} className="list-group-item" id="item">{element.description}{""}
+                    <li key={index} className="list-group-item pt-3" id="item">{element.description}{""}
                     {""}
-                    <button type="submit" onClick={() => eliminarTask(index)} className="btn btn-danger" id="eliminar">x</button>
+                    <button type="submit" onClick={() => eliminarTask(index)} className="btn btn-light float-end" id="eliminar">x</button>
                     </li>
                 )
             })}
